@@ -46,7 +46,7 @@ runpy.run_path(sys.argv[0], run_name='__main__')
         command = self.get_command()
         assert command is not None
         assert self._code is not None
-        return [command, '-BS' + ('u' if self.unbuffered else ''), self._loader, self._code]
+        return [command, '-B' + ('u' if self.unbuffered else ''), self._loader, self._code]
 
     def get_executable(self) -> str:
         command = self.get_command()
